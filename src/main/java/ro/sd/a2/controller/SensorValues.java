@@ -26,6 +26,7 @@ public class SensorValues {
 
     //@GetMapping("/testare")
     //@Scheduled(cron = "0 */10 * ? * *")
+    //@Scheduled(cron = "*/10 * * ? * *")
     @Scheduled(cron = "*/10 * * ? * *")
     public void sendValues(){
         SensorValuesDTO sensorValuesDTO = readCSVService.getValueFromCSV();
